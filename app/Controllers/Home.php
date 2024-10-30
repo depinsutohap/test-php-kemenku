@@ -34,7 +34,7 @@ class Home extends BaseController
         $key = getenv("JWT_SECRET");
 
         $iat = time();
-        $exp = $iat + (60*60);
+        $exp = $iat + (60*60*60);
 
         $payload = array(
             "iss" => "Issuer of the JWT",
@@ -43,6 +43,7 @@ class Home extends BaseController
             "iat" => $iat, //Time the JWT issued at
             "exp" => $exp, // Expiration time of token
             "email" => $user['email'],
+			'role' => $user['role'],
         );
          
         $token = JWT::encode($payload, $key, 'HS256');
@@ -58,7 +59,8 @@ class Home extends BaseController
     }
     public function product()
     {
-        return view('product');
+        $token = session()->get("token");
+        return view('product',["token" => $token]);
     }
     public function productById($id)
     {

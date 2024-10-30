@@ -214,12 +214,8 @@
                 <button id="menuToggle">&#9776;</button>
             </li>
             <li class="menu-item hidden"><a href="">Products</a></li>
-            <li class="menu-item hidden"><a href="">Docs</a>
-            </li>
-            <li class="menu-item hidden"><a href="https://forum.codeigniter.com/" target="_blank">Community</a></li>
-            <li class="menu-item hidden"><a
-                    href="https://codeigniter.com/contribute" target="_blank">Contribute</a>
-            </li>
+            
+            <li class="menu-item hidden"><a href="/logout">logout</a></li>
         </ul>
     </div>
 
@@ -256,7 +252,10 @@
   processing: true,
   serverSide: true,
   ajax: {
-    url: 'ajax_datatables/product',
+    url: 'ajax_datatables',
+    "headers": {
+        "Authorization": "<?=$token?>"
+    },
     method: 'GET',
   },
   "columns": [

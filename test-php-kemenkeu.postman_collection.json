@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "ec15d7e7-e1e3-4666-9c5e-c08ba1353895",
+		"name": "test-php-kemenkeu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11536960"
+	},
+	"item": [
+		{
+			"name": "API datatables",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJc3N1ZXIgb2YgdGhlIEpXVCIsImF1ZCI6IkF1ZGllbmNlIHRoYXQgdGhlIEpXVCIsInN1YiI6IlN1YmplY3Qgb2YgdGhlIEpXVCIsImlhdCI6MTczMDI2MzAyNSwiZXhwIjoxNzMwNDc5MDI1LCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiJ9.tG5--kH3iGli1PrWxQDpmf-a_6NX9ep-iT2mGNu33rI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/ajax_datatables",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ajax_datatables"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

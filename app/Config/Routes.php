@@ -15,4 +15,4 @@ $routes->post('/create/product', 'Home::createproductPost', ['filter' => 'authfi
 $routes->get('/login', 'Home::login');
 $routes->get('/logout', 'Home::logout');
 $routes->post('/login', 'Home::loginVerif');
-$routes->get('/ajax_datatables/product', 'Home::dataTables', ['filter' => 'authfilter']);
+$routes->get('/ajax_datatables', 'Home::dataTables', ['filter' => 'tokenfilter']);
