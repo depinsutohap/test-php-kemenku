@@ -256,7 +256,7 @@
   processing: true,
   serverSide: true,
   ajax: {
-    url: 'ajax_datatables',
+    url: 'ajax_datatables/product',
     method: 'GET',
   },
   "columns": [
